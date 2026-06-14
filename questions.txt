@@ -1,0 +1,5 @@
+Which keyword is used to define a class in C++?|object|class|struct|private|B
+Which loop executes at least once?|for|while|do-while|nested-for|C
+Which operator allocates memory dynamically?|malloc|create|new|alloc|C
+Which symbol is used for pointers?|*|#|%|$|A
+What is the extension of a C++ source file?|.java|.py|.cpp|.html|CTo use ifstream and ofstream which library we have to include|<fstream>|<sstream>|<cstring>|<string>|A
