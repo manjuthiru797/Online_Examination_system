@@ -109,20 +109,37 @@ void student::viewResult()
     float percentage;
     string result;
 
-    while(fin>>id>>marks>>percentage>>result)
-    {
-        if(id==studentId)
-        {
-            cout<<"\n------Your Result--------\n";
-            cout<<"Student ID: "<<id<<endl;
-            cout<<"Marks     : "<<marks<<endl;
-            cout<<"Percentage: "<<percentage<<"%"<<endl;
-            cout<<"Result    : "<<result<<endl;
+    int latestMarks;
+    float latestPercentage;
+    string latestResult;
 
-            fin.close();
-            return;
+    bool found = false;
+
+    while(fin >> id >> marks >> percentage >> result)
+    {
+        if(id == studentId)
+        {
+            latestMarks = marks;
+            latestPercentage = percentage;
+            latestResult = result;
+
+            found = true;
         }
     }
-    cout<<"\nNo Result Found\n";
+
     fin.close();
+
+    if(found)
+    {
+        cout << "\n------Your Result--------\n";
+        cout << "Student ID: " << studentId << endl;
+        cout << "Marks     : " << latestMarks << endl;
+        cout << "Percentage: " << latestPercentage << "%" << endl;
+        cout << "Result    : " << latestResult << endl;
+    }
+    else
+    {
+        cout << "\nNo Result Found\n";
+    }
 }
+
